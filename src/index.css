@@ -1,13 +1,91 @@
-body {
+*{
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Barlow;
+}
+body{
+  background-color: rgb(38, 38, 38);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.App{
+  height: 100vh;
+  display: grid;
+  place-items: center;  
+}
+#drum-machine{
+  display: grid;
+  width: 660px;
+  border: solid 5px rgb(233, 233, 233);
+  position: relative;
+  background-color: rgb(72, 72, 72);
+  grid-template-columns: auto auto; 
+  
+}
+#drum-button{
+  width: 332px;
+  height: 272px;
+  display: grid;
+  grid-template-columns: auto auto auto; 
+  margin: 20px;
+}
+button{
+  font-size: 1rem;
+  font-weight: 400;
+}
+.drum-pad{
+  color:rgb(235, 230, 230);
+  background-color: rgb(56, 56, 56);
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: rgb(236, 236, 236) 3px 3px 5px;
+}
+.drum-pad:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(163, 163, 163, 0.683);
+}
+.active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(163, 163, 163, 0.683);
+}
+.drum-control{
+  width: 240px;
+  height: 272px auto;
+  margin: 40px 20px 0 10px;
+  /*border: solid 2px green;*/
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#display {
+  font-size: 1.4rem;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(82, 157, 214);
+  margin: 15px auto;
+  padding: 10px;
+  color: rgb(255, 251, 251);
+}
+.text{
+  background-color: aliceblue;
+  width: 200px;
+  border-radius: 20px;
+  padding-top: 4px;
+  margin: 15px auto;
+  height: 30px;
+}
+.power-icon{
+  -webkit-box-shadow: 2px 2px 60px 5px rgba(245,245,245,1);
+  -moz-box-shadow: 2px 2px  60px 5px rgba(245,245,245,1);
+  box-shadow: 2px 2px  60px 5px rgba(245,245,245,1);
+}
+.power-icon-off{
+ opacity: 60%;
 }
